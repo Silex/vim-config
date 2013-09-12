@@ -1,0 +1,50 @@
+snippet Inc "#include local header" !
+#include "${1:`!p snip.rv = snip.basename + '.h'`}"
+endsnippet
+
+snippet inc "#include system header <>" !
+#include <${1:iostream}>
+endsnippet
+
+snippet for "for loop" !
+for (${4:unsigned} ${2:i} = 0; $2 < ${1:count}; ${3:++$2})
+{
+	${0:// code} 
+}
+endsnippet
+
+snippet once "Include header once only guard" !
+#ifndef ${1:`!p
+if not snip.c:
+	import random, string
+	name = re.sub(r'[^A-Za-z0-9]+','_', snip.fn).upper()
+	rand = ''.join(random.sample(string.ascii_letters+string.digits, 8))
+	snip.rv = ('%s_%s' % (name,rand)).upper()
+else:
+    snip.rv = snip.c`}
+#define $1
+
+${0}
+
+#endif /* end of include guard: $1 */
+
+endsnippet
+
+snippet td "typedef" !
+typedef ${1:type} ${2:othertype};$0
+endsnippet
+
+snippet do "do...while loop (do)"
+do
+{
+	${0:/* code */}
+}
+while(${1:/* condition */});
+endsnippet
+
+snippet if "if" !
+if (${1:condition})
+{
+	${0:// code}
+}
+endsnippet

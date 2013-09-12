@@ -1,0 +1,54 @@
+# Read File Into vector
+snippet readfile
+	std::ifstream ${2:file}(${1:'filename'}, std::ios::binary);
+	std::ifstreambuf_iterator<char> start($2), stop);
+	std::vector<char> ${3:buffer}(start, stop);${3}
+# std::map
+snippet map
+	std::map<${1:key}, ${2:value}> map${3};
+# std::vector
+snippet vec
+	std::vector<${1:char}> v${2};
+# std::list
+snippet list
+	std::list<${1:char}> l${2};
+# std::deque
+snippet deq
+	std::deque<${1:char}> l${2};
+# std::queue
+snippet queue
+	std::queue<${1:char}> l${2};
+# Namespace
+snippet ns
+	namespace ${1:`Filename('', 'name')`}
+	{
+	    ${2}
+	} // namespace $1
+# Member function
+snippet mfun
+	${1:void} ${2:`Filename('', 'name')`}::${3:name}(${4})${5: const}
+	{
+	    ${6:code}
+	}
+	${7}
+# Class
+snippet cl
+	class ${1:`Filename('$1', 'name')`}
+	{
+
+	  public:
+
+	    $1(${2});
+	    virtual ~$1();
+
+
+	  private:
+
+	    ${3}
+
+	};
+snippet fori
+	for(int ${2:i} = 0; $2 != ${1:count}; ++$2)
+	{
+	    ${4:code}
+	}
