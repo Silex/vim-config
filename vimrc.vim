@@ -96,7 +96,7 @@ highlight diffRemoved guifg=#bf0000
 let g:vim_addon_manager = {}
 let g:vim_addon_manager.shallow_clones = 0
 let &runtimepath .= ',' . fnameescape(g:config_directory) . '/plugins/vim-addon-manager'
-let s:plugins = 'bad-whitespace molokai Powerline vim-multiple-cursors css_color vim-coffee-script repeat inkpot The_NERD_tree UltiSnips FuzzyFinder afterimage browser%2227 pythondo up tabular DrawIt matchit.zip fugitive gitv rails FSwitch Decho clang_complete visualstar PickAColor ideone surround vcscommand DirDiff textobj-rubyblock Conque_Shell cmakeref scons pdc Gundo vim_easymotion'
+let s:plugins = 'bad-whitespace molokai vim-powerline vim-multiple-cursors css_color vim-coffee-script repeat inkpot The_NERD_tree UltiSnips FuzzyFinder afterimage browser%2227 pythondo up Tabular DrawIt matchit.zip fugitive gitv rails FSwitch Decho clang_complete visualstar PickAColor ideone surround vcscommand DirDiff textobj-rubyblock Conque_Shell cmakeref scons pdc Gundo EasyMotion'
 call vam#ActivateAddons(split(s:plugins, ' '))
 let &runtimepath = fnameescape(g:config_directory) . '/Silex,' . &runtimepath
 
